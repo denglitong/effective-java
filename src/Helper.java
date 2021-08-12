@@ -8,10 +8,18 @@ import java.util.Objects;
  */
 public class Helper {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         // Objects.requireNonNull(args, "args can not be null");
 
-        localDate();
+        // localDate();
+
+        long n1 = System.nanoTime();
+        long m1 = System.currentTimeMillis();
+        Thread.sleep(1000);
+        long n2 = System.nanoTime();
+        long m2 = System.currentTimeMillis();
+        System.out.println(n2 - n1);
+        System.out.println(m2 - m1);
     }
 
     private static void calculate() {
@@ -70,4 +78,5 @@ public class Helper {
 
         // TODO more
     }
+
 }
